@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotsContainer = document.getElementById('dots-container');
   const fullscreenToggle = document.getElementById('fullscreen-toggle');
   const liveTimeEl = document.getElementById('live-time');
+  const ambientBgImg = document.getElementById('ambient-bg-img');
 
   // Modal Elements
   const modal = document.getElementById('response-modal');
@@ -90,6 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.classList.remove('active');
       }
     });
+
+    // Crossfade Dynamic Ambient Background Image
+    if (ambientBgImg) {
+      ambientBgImg.style.opacity = '0.12';
+      setTimeout(() => {
+        ambientBgImg.style.backgroundImage = `url('images/slide_${currentSlide}.jpg')`;
+        ambientBgImg.style.opacity = '0.35';
+      }, 250);
+    }
   }
 
   // Next and Prev Button Listeners

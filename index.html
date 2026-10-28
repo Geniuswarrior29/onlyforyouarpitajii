@@ -12,7 +12,13 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
 </head>
 <body>
-  <!-- Ambient Canvas Background for Floating Petals and Stars -->
+  <!-- Dynamic Ambient Background with Ken Burns Animation -->
+  <div class="ambient-bg-layer" id="ambient-bg-layer">
+    <div class="ambient-bg-img" id="ambient-bg-img" style="background-image: url('images/slide_1.jpg');"></div>
+    <div class="ambient-bg-tint"></div>
+  </div>
+
+  <!-- Ambient Canvas Background for Floating Petals and Sparkles -->
   <canvas id="ambient-canvas"></canvas>
 
   <!-- Floating Romantic Glow Orbs in Background -->
@@ -58,8 +64,15 @@
             <span class="slide-category">Special Delivery 💌</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🎁</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_1.jpg" 
+                   alt="Memory 1" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/PvzrMg9T/85320.jpg';" 
+                   class="slide-img" 
+                   loading="eager" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h1 class="slide-title">Tumhare liye ek chhota sa surprise hai…</h1>
@@ -83,8 +96,15 @@
             <span class="slide-category">Dil Ki Baat 💭</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">💬</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_2.jpg" 
+                   alt="Memory 2" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/27fGqTJv/93613.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Hame tumse kuch kehna hai.</h2>
@@ -109,8 +129,15 @@
             <span class="slide-category">Safe Haven 🤍</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">✨</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_3.jpg" 
+                   alt="Memory 3" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/W4h4LwYz/96090.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <p class="slide-body highlight-text">Yaar, tumhare saath hame itna comfortable feel hota hai na ki hum tumhare saamne apne saare emotions rakh dete hain.</p>
@@ -135,8 +162,15 @@
             <span class="slide-category">Your Magic ✨</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🌷</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_4.jpg" 
+                   alt="Memory 4" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/JRWykfHr/100920.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title subtle-title">Chahe hum emotional hon, gusse mein hon, ya full masti ke mood mein…</h2>
@@ -161,8 +195,15 @@
             <span class="slide-category">Real & Raw 🌿</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🤍</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_5.jpg" 
+                   alt="Memory 5" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/0VXJ3GVF/101634.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Tumhare saamne hame kuch pretend nahi karna padta.</h2>
@@ -187,8 +228,15 @@
             <span class="slide-category">The Spark ⚡</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">💫</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_6.jpg" 
+                   alt="Memory 6" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/bM0KDSXY/104999.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Pata hi nahi chala ki itne kam time mein tumse itni attachment kab ho gayi.</h2>
@@ -213,8 +261,15 @@
             <span class="slide-category">Every Little Thing 🗺️</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🌸</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_7.jpg" 
+                   alt="Memory 7" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/bM0KDSXY/104999.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Ab toh haal ye hai ki kahin ghoomne bhi jaana ho, toh tumhara opinion chahiye hota hai.</h2>
@@ -239,8 +294,15 @@
             <span class="slide-category">Honest Confession 🕊️</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">💌</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_8.jpg" 
+                   alt="Memory 8" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/PZThRKsQ/108714.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Hame pata hai shayad hum ye sab bahut jaldi bol rahe hain.</h2>
@@ -265,8 +327,15 @@
             <span class="slide-category">A Little Insecure 🥺</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🦋</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_9.jpg" 
+                   alt="Memory 9" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/d0x9t3cF/108717.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Yaar tum itni sundar ho, itni achhi ho…</h2>
@@ -291,8 +360,15 @@
             <span class="slide-category">Pure Intentions 💎</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🌷</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_10.jpg" 
+                   alt="Memory 10" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/vvMjrY0g/108720.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Hum kisi se compete nahi karna chahte.</h2>
@@ -317,8 +393,15 @@
             <span class="slide-category">Taking It Slow ⏳</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🌱</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_11.jpg" 
+                   alt="Memory 11" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/0VvTvgjH/108723.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Dekho, kisi bhi relationship ke liye shayad koi pehle se completely ready nahi hota.</h2>
@@ -343,8 +426,15 @@
             <span class="slide-category">Growing Together 🌿</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🪴</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_12.jpg" 
+                   alt="Memory 12" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/4Rg9JN73/108726.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Kya pata hum ek relationship mein rehkar ek doosre ko aur achhe se samajh paayein?</h2>
@@ -369,8 +459,15 @@
             <span class="slide-category">Your Dreams First 🎓</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">📚</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_13.jpg" 
+                   alt="Memory 13" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/7tn4qMC7/108729.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Hame pata hai tumhari padhai aur career kitne important hain.</h2>
@@ -395,8 +492,15 @@
             <span class="slide-category">Unshakeable Trust 🤝</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🎯</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_14.jpg" 
+                   alt="Memory 14" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/fYwVWkCz/108731.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Hum chahte hain ki hamare beech itna trust ho ki hum dono apne goals par bina unnecessary tension ke focus kar paayein.</h2>
@@ -421,8 +525,15 @@
             <span class="slide-category">Official Job Application 📝</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">👑</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_15.jpg" 
+                   alt="Memory 15" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/xq8knjCT/108754.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title playful-title">Hame pata hai tumhe servant chahiye na? 👀</h2>
@@ -462,9 +573,9 @@
               <div class="laptop-screen">
                 <div class="screen-wallpaper-container">
                   <img id="arpita-photo" 
-                       src="arpita_eyes.jpg" 
+                       src="images/slide_16.jpg" 
                        alt="Arpita's eyes wallpaper"
-                       onerror="this.onerror=null; this.src='https://i.ibb.co/ds9QgR1P/110287.jpg';"
+                       onerror="this.onerror=null; this.src='https://i.ibb.co/1tKQMXs1/110287.jpg';"
                        class="wallpaper-img" />
                   <div class="wallpaper-vignette"></div>
                   <div class="desktop-clock">
@@ -501,8 +612,15 @@
             <span class="slide-category">Mutual Comfort & Space 🕊️</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🤝</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_17.jpg" 
+                   alt="Memory 17" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/HLw0qjN0/110291.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Hum dono milkar apni boundaries decide kar lenge.</h2>
@@ -527,8 +645,15 @@
             <span class="slide-category">A Heartfelt Promise 🤞</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">💖</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_18.jpg" 
+                   alt="Memory 18" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/B5yWpS73/110294.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Ek baar hamare upar trust karke dekh lo na.</h2>
@@ -553,8 +678,15 @@
             <span class="slide-category">Your Happiness Always 🌟</span>
           </div>
 
-          <div class="slide-icon-burst">
-            <span class="animated-icon">🌻</span>
+          <div class="slide-photo-card">
+            <div class="photo-frame">
+              <img src="images/slide_19.jpg" 
+                   alt="Memory 19" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/zWGhdKkp/110296.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <h2 class="slide-title">Agar kabhi tumhe lage ki hum tumhare career ya happiness ke beech aa rahe hain, toh hum baithkar baat karenge.</h2>
@@ -577,6 +709,17 @@
           <div class="slide-badge-wrapper">
             <span class="slide-badge highlight-badge">SLIDE 20 / 20</span>
             <span class="slide-category">From The Bottom Of My Heart 💌</span>
+          </div>
+
+          <div class="slide-photo-card proposal-photo-card">
+            <div class="photo-frame proposal-photo-frame">
+              <img src="images/slide_20.jpg" 
+                   alt="Memory 20" 
+                   onerror="this.onerror=null; this.src='https://i.ibb.co/qMh4zpst/110300.jpg';" 
+                   class="slide-img" 
+                   loading="lazy" />
+              <div class="photo-glow-overlay"></div>
+            </div>
           </div>
 
           <div class="proposal-intro">
