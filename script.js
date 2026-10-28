@@ -236,20 +236,20 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.rotate((this.rotation * Math.PI) / 180);
 
       if (this.isPetal) {
-        // Calm crimson & wine petal
+        // Soft rose & cherry petal
         ctx.beginPath();
         const petalColor = this.isDarkRed 
-          ? `rgba(186, 24, 27, ${this.opacity})` 
-          : `rgba(229, 56, 59, ${this.opacity * 0.85})`;
+          ? `rgba(229, 56, 59, ${this.opacity * 0.55})` 
+          : `rgba(255, 117, 143, ${this.opacity * 0.65})`;
         ctx.fillStyle = petalColor;
         ctx.ellipse(0, 0, this.size, this.size * 0.6, Math.PI / 4, 0, Math.PI * 2);
         ctx.fill();
       } else {
-        // Twinkling soft amber star / firefly
+        // Soft glowing sparkle
         ctx.beginPath();
         const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, this.size);
-        gradient.addColorStop(0, `rgba(255, 215, 170, ${this.opacity * 1.1})`);
-        gradient.addColorStop(1, 'rgba(229, 56, 59, 0)');
+        gradient.addColorStop(0, `rgba(255, 150, 170, ${this.opacity * 0.8})`);
+        gradient.addColorStop(1, 'rgba(255, 200, 210, 0)');
         ctx.fillStyle = gradient;
         ctx.arc(0, 0, this.size * 0.8, 0, Math.PI * 2);
         ctx.fill();
