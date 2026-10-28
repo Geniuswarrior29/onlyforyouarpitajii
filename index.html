@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>A Special Surprise For You, Arpita ❤️</title>
+  <meta name="description" content="A special, heartfelt message created with all my love for Arpita.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+</head>
+<body>
+  <!-- Ambient Canvas Background for Floating Petals and Stars -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Floating Romantic Glow Orbs in Background -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Top Navigation & Controls Bar -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span class="heart-pulse">❤️</span>
+      <span class="brand-text">Only For You, Arpita</span>
+    </div>
+
+    <!-- Progress Tracker -->
+    <div class="progress-container">
+      <div class="progress-bar-wrap">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <span class="progress-label" id="progress-text">Slide 1 of 20</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="nav-controls">
+      <button id="music-toggle" class="control-btn" aria-label="Toggle Romantic Music" title="Toggle Romantic Music">
+        <div class="eq-bars">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </div>
+        <span class="music-label">Music</span>
+      </button>
+
+      <button id="fullscreen-toggle" class="control-btn icon-only" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
+        <svg class="icon-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Slide Experience Viewport -->
+  <main class="slide-viewport">
+    <div class="slide-deck-container">
+
+      <!-- ================= SLIDE 01 / 20 ================= -->
+      <article class="slide active" data-slide="1">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 01 / 20</span>
+            <span class="slide-category">Special Delivery 💌</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🎁</span>
+          </div>
+
+          <h1 class="slide-title">Tumhare liye ek chhota sa surprise hai…</h1>
+          <p class="slide-body">Ab itni mehnat se banaya hai toh poora dekhna padega, okay? 😭❤️</p>
+
+          <div class="slide-actions">
+            <button class="primary-btn next-btn" data-target="2">
+              <span>Let's gooo 💌</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 02 / 20 ================= -->
+      <article class="slide" data-slide="2">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 02 / 20</span>
+            <span class="slide-category">Dil Ki Baat 💭</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">💬</span>
+          </div>
+
+          <h2 class="slide-title">Hame tumse kuch kehna hai.</h2>
+          <p class="slide-body">Bahut dino se soch rahe the kaise bolein, toh socha kuch alag tareeke se bolte hain.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="1" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="3">
+              <span>Achha ji, aage? 👀</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 03 / 20 ================= -->
+      <article class="slide" data-slide="3">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 03 / 20</span>
+            <span class="slide-category">Safe Haven 🤍</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">✨</span>
+          </div>
+
+          <p class="slide-body highlight-text">Yaar, tumhare saath hame itna comfortable feel hota hai na ki hum tumhare saamne apne saare emotions rakh dete hain.</p>
+          <p class="slide-subtitle">Without thinking twice.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="2" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="4">
+              <span>And you know what?</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 04 / 20 ================= -->
+      <article class="slide" data-slide="4">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 04 / 20</span>
+            <span class="slide-category">Your Magic ✨</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🌷</span>
+          </div>
+
+          <h2 class="slide-title subtle-title">Chahe hum emotional hon, gusse mein hon, ya full masti ke mood mein…</h2>
+          <p class="slide-body">Tum hame tab bhi hasa deti ho jab hum bilkul bhi hasne ke mood mein nahi hote. 😭❤️</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="3" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="5">
+              <span>That's special 🌷</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 05 / 20 ================= -->
+      <article class="slide" data-slide="5">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 05 / 20</span>
+            <span class="slide-category">Real & Raw 🌿</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🤍</span>
+          </div>
+
+          <h2 class="slide-title">Tumhare saamne hame kuch pretend nahi karna padta.</h2>
+          <p class="slide-body">Hum jaise bhi hain, waise hi reh sakte hain. Aur ye feeling bahut rare hai yaar.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="4" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="6">
+              <span>Ek aur baat…</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 06 / 20 ================= -->
+      <article class="slide" data-slide="6">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 06 / 20</span>
+            <span class="slide-category">The Spark ⚡</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">💫</span>
+          </div>
+
+          <h2 class="slide-title">Pata hi nahi chala ki itne kam time mein tumse itni attachment kab ho gayi.</h2>
+          <p class="slide-body">Bas dheere-dheere tum hamare liye bahut special ban gayi.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="5" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="7">
+              <span>Kitni special? 👀</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 07 / 20 ================= -->
+      <article class="slide" data-slide="7">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 07 / 20</span>
+            <span class="slide-category">Every Little Thing 🗺️</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🌸</span>
+          </div>
+
+          <h2 class="slide-title">Ab toh haal ye hai ki kahin ghoomne bhi jaana ho, toh tumhara opinion chahiye hota hai.</h2>
+          <p class="slide-body">Tumhe bataye bina kuch-kuch incomplete sa lagta hai. 😭</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="6" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="8">
+              <span>Hehe, aur suno</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 08 / 20 ================= -->
+      <article class="slide" data-slide="8">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 08 / 20</span>
+            <span class="slide-category">Honest Confession 🕊️</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">💌</span>
+          </div>
+
+          <h2 class="slide-title">Hame pata hai shayad hum ye sab bahut jaldi bol rahe hain.</h2>
+          <p class="slide-body">Lekin jo feel karte hain, woh tumse chhupana bhi nahi chahte.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="7" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="9">
+              <span>Can we be honest?</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 09 / 20 ================= -->
+      <article class="slide" data-slide="9">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 09 / 20</span>
+            <span class="slide-category">A Little Insecure 🥺</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🦋</span>
+          </div>
+
+          <h2 class="slide-title">Yaar tum itni sundar ho, itni achhi ho…</h2>
+          <p class="slide-body">Kabhi-kabhi insecurity hoti hai ki tumhe hamare jaise kitne log pasand karte honge. Aur pata nahi aage kya ho.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="8" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="10">
+              <span>But wait… ❤️</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 10 / 20 ================= -->
+      <article class="slide" data-slide="10">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 10 / 20</span>
+            <span class="slide-category">Pure Intentions 💎</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🌷</span>
+          </div>
+
+          <h2 class="slide-title">Hum kisi se compete nahi karna chahte.</h2>
+          <p class="slide-body">Bas tumhe batana chahte hain ki hamari feelings genuine hain. Aur tum hamare liye kitni important ho.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="9" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="11">
+              <span>There's more 🌷</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 11 / 20 ================= -->
+      <article class="slide" data-slide="11">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 11 / 20</span>
+            <span class="slide-category">Taking It Slow ⏳</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🌱</span>
+          </div>
+
+          <h2 class="slide-title">Dekho, kisi bhi relationship ke liye shayad koi pehle se completely ready nahi hota.</h2>
+          <p class="slide-body">Trust aur understanding time ke saath hi toh banti hai na?</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="10" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="12">
+              <span>So what if…</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 12 / 20 ================= -->
+      <article class="slide" data-slide="12">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 12 / 20</span>
+            <span class="slide-category">Growing Together 🌿</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🪴</span>
+          </div>
+
+          <h2 class="slide-title">Kya pata hum ek relationship mein rehkar ek doosre ko aur achhe se samajh paayein?</h2>
+          <p class="slide-body">Dheere-dheere, bina kisi jaldi ke, ek doosre ke saath grow karein.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="11" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="13">
+              <span>Ek promise sunogi?</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 13 / 20 ================= -->
+      <article class="slide" data-slide="13">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 13 / 20</span>
+            <span class="slide-category">Your Dreams First 🎓</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">📚</span>
+          </div>
+
+          <h2 class="slide-title">Hame pata hai tumhari padhai aur career kitne important hain.</h2>
+          <p class="slide-body">Hum kabhi nahi chahenge ki hamari wajah se tumhari padhai affect ho. Hum tumhe support karna chahte hain, distract nahi.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="12" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="14">
+              <span>And one more thing</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 14 / 20 ================= -->
+      <article class="slide" data-slide="14">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 14 / 20</span>
+            <span class="slide-category">Unshakeable Trust 🤝</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🎯</span>
+          </div>
+
+          <h2 class="slide-title">Hum chahte hain ki hamare beech itna trust ho ki hum dono apne goals par bina unnecessary tension ke focus kar paayein.</h2>
+          <p class="slide-body">Ek doosre ke saath bhi, aur apne sapno ke saath bhi.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="13" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="15">
+              <span>Hehe, ab suno 👀</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 15 / 20 ================= -->
+      <article class="slide" data-slide="15">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 15 / 20</span>
+            <span class="slide-category">Official Job Application 📝</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">👑</span>
+          </div>
+
+          <h2 class="slide-title playful-title">Hame pata hai tumhe servant chahiye na? 👀</h2>
+          <p class="slide-body">Someone who listens to you, understands you, cares for you, and gives you importance…</p>
+          <div class="quote-box">
+            <span class="quote-text">I can be that person for you. 😭❤️</span>
+          </div>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="14" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="16">
+              <span>Ek secret batayein?</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 16 / 20 ================= -->
+      <article class="slide" data-slide="16">
+        <div class="card-glow"></div>
+        <div class="slide-content slide-photo-layout">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 16 / 20</span>
+            <span class="slide-category">My Favorite View 💻✨</span>
+          </div>
+
+          <h2 class="slide-title compact-title">Tumhari woh aankhon wali picture yaad hai?</h2>
+          <p class="slide-body compact-body">Woh hamare laptop ka wallpaper hai. 😭❤️</p>
+
+          <!-- Laptop Screen Mockup -->
+          <div class="laptop-mockup-wrapper">
+            <div class="laptop-frame">
+              <div class="laptop-notch">
+                <span class="webcam-dot"></span>
+              </div>
+              <div class="laptop-screen">
+                <div class="screen-wallpaper-container">
+                  <img id="arpita-photo" 
+                       src="arpita_eyes.jpg" 
+                       alt="Arpita's eyes wallpaper"
+                       onerror="this.onerror=null; this.src='https://i.ibb.co/ds9QgR1P/110287.jpg';"
+                       class="wallpaper-img" />
+                  <div class="wallpaper-vignette"></div>
+                  <div class="desktop-clock">
+                    <span id="live-time">11:11</span>
+                    <span class="desktop-quote">Those eyes. Always. ❤️</span>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-bottom-bar">
+                <div class="trackpad-indent"></div>
+              </div>
+            </div>
+            <div class="sticky-note">
+              <span>📌 The prettiest eyes I could gaze at forever ✨</span>
+            </div>
+          </div>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="15" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="17">
+              <span>Sharmao mat, aage dekho 🤭</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 17 / 20 ================= -->
+      <article class="slide" data-slide="17">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 17 / 20</span>
+            <span class="slide-category">Mutual Comfort & Space 🕊️</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🤝</span>
+          </div>
+
+          <h2 class="slide-title">Hum dono milkar apni boundaries decide kar lenge.</h2>
+          <p class="slide-body">Jismein tum bhi comfortable raho aur hum bhi. Space, trust aur respect sab rahega.</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="16" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="18">
+              <span>Almost there… 💌</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 18 / 20 ================= -->
+      <article class="slide" data-slide="18">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 18 / 20</span>
+            <span class="slide-category">A Heartfelt Promise 🤞</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">💖</span>
+          </div>
+
+          <h2 class="slide-title">Ek baar hamare upar trust karke dekh lo na.</h2>
+          <p class="slide-body">Hum perfect hone ka promise nahi kar sakte, lekin tumhe samajhne, tumhari care karne aur tumhe support karne ki poori koshish karenge. ❤️</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="17" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn" data-target="19">
+              <span>One last thing…</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 19 / 20 ================= -->
+      <article class="slide" data-slide="19">
+        <div class="card-glow"></div>
+        <div class="slide-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge">SLIDE 19 / 20</span>
+            <span class="slide-category">Your Happiness Always 🌟</span>
+          </div>
+
+          <div class="slide-icon-burst">
+            <span class="animated-icon">🌻</span>
+          </div>
+
+          <h2 class="slide-title">Agar kabhi tumhe lage ki hum tumhare career ya happiness ke beech aa rahe hain, toh hum baithkar baat karenge.</h2>
+          <p class="slide-body">Tumhari happiness aur tumhare dreams hamesha important rahenge. ❤️</p>
+
+          <div class="slide-actions">
+            <button class="ghost-btn prev-btn" data-target="18" title="Previous Slide">← Back</button>
+            <button class="primary-btn next-btn pulse-glow" data-target="20">
+              <span>Ready for the last slide? 🥹</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ================= SLIDE 20 / 20 ================= -->
+      <article class="slide slide-proposal" data-slide="20">
+        <div class="card-glow"></div>
+        <div class="slide-content proposal-content">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge highlight-badge">SLIDE 20 / 20</span>
+            <span class="slide-category">From The Bottom Of My Heart 💌</span>
+          </div>
+
+          <div class="proposal-intro">
+            <h2 class="proposal-headline">Yaar, hame tum sach mein bahut pasand ho.</h2>
+            <p class="proposal-lead">Hum tumhare saath kuch beautiful build karna chahte hain. Tumhare saath hasna, grow karna aur bahut saari memories banana chahte hain.</p>
+          </div>
+
+          <div class="big-question-card">
+            <div class="question-heart-ring">
+              <span class="floating-ring-heart">💍</span>
+            </div>
+            <h3 class="big-question-text">Toh… kya tum hamare saath ek relationship ko chance dena chahogi? 🥹❤️</h3>
+            <p class="no-pressure-note">No pressure, take your time. Tumhara answer jo bhi ho, hum uski respect karenge.</p>
+          </div>
+
+          <!-- Three Final Response Buttons -->
+          <div class="final-decisions-grid">
+            <button class="decision-btn btn-yes" id="btn-choice-yes">
+              <div class="decision-btn-icon">🥹❤️</div>
+              <div class="decision-btn-text">
+                <span class="decision-title">Yes, I'd love to!</span>
+                <span class="decision-sub">Let's give this a chance ✨</span>
+              </div>
+              <div class="btn-sparkle-shine"></div>
+            </button>
+
+            <button class="decision-btn btn-think" id="btn-choice-think">
+              <div class="decision-btn-icon">⏳🌸</div>
+              <div class="decision-btn-text">
+                <span class="decision-title">Need some time to think</span>
+                <span class="decision-sub">I want to think calmly 💭</span>
+              </div>
+            </button>
+
+            <button class="decision-btn btn-friends" id="btn-choice-friends">
+              <div class="decision-btn-icon">🤝🤍</div>
+              <div class="decision-btn-text">
+                <span class="decision-title">Let's stay good friends</span>
+                <span class="decision-sub">Our friendship comes first 🌟</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="slide-actions-bottom">
+            <button class="ghost-btn prev-btn" data-target="19" title="Previous Slide">← Previous Slide</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Bottom Quick Slide Navigator Indicator -->
+  <footer class="bottom-tray">
+    <div class="dots-slider" id="dots-container">
+      <!-- 20 indicator dots generated dynamically in script -->
+    </div>
+    <div class="keyboard-hint">
+      <span>Use <kbd>←</kbd> <kbd>→</kbd> or swipe on mobile</span>
+    </div>
+  </footer>
+
+  <!-- ================= CELEBRATION / RESPONSE MODAL ================= -->
+  <div class="modal-overlay" id="response-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-card">
+        <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+        <div class="modal-icon-container" id="modal-icon">🎉</div>
+        <h3 class="modal-title" id="modal-title">Title Here</h3>
+        <p class="modal-message" id="modal-message">Message text here...</p>
+        
+        <div class="modal-extra-note" id="modal-extra-note"></div>
+
+        <div class="modal-actions">
+          <a href="#" id="modal-whatsapp-btn" target="_blank" class="primary-btn whatsapp-action-btn">
+            <span>Send message to him 💬</span>
+          </a>
+          <button class="ghost-btn" id="modal-read-again-btn">
+            <span>Read again from start ↺</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confetti Canvas for Grand Celebration -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
