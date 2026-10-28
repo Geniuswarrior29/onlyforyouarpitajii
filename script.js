@@ -102,11 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Crossfade Dynamic Ambient Background Image
     if (ambientBgImg) {
-      ambientBgImg.style.opacity = '0.28';
+      ambientBgImg.style.opacity = '0.55';
       setTimeout(() => {
         ambientBgImg.style.backgroundImage = `url('images/slide_${currentSlide}.jpg')`;
-        ambientBgImg.style.opacity = slideDeck && slideDeck.classList.contains('photo-peek') ? '0.9' : '0.55';
-      }, 180);
+        ambientBgImg.style.opacity = slideDeck && slideDeck.classList.contains('photo-peek') ? '1.0' : '0.88';
+      }, 150);
     }
   }
 
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     peekPhotoBtn.addEventListener('click', () => {
       const isPeeking = slideDeck.classList.toggle('photo-peek');
       if (ambientBgImg) {
-        ambientBgImg.style.opacity = isPeeking ? '0.92' : '0.55';
+        ambientBgImg.style.opacity = isPeeking ? '1.0' : '0.88';
       }
       const label = peekPhotoBtn.querySelector('.control-label');
       if (label) label.textContent = isPeeking ? 'Show' : 'Photo';
