@@ -1,6 +1,7 @@
 /* ==========================================================================
    ONLY FOR YOU, ARPITA - STYLESHEET
-   Aesthetic: Romantic Light Porcelain, Dynamic Photo Background & Calm Red Accents
+   Aesthetic: Full-Bleed Photo Backgrounds with Ken Burns Motion,
+              Romantic Light Porcelain Frosted Glass & Calm Red Accents
    ========================================================================== */
 
 :root {
@@ -14,8 +15,8 @@
   --text-main: #2b0b10;
   --text-soft: #4e1d24;
   --text-muted: #854850;
-  --glass-bg: rgba(255, 255, 255, 0.86);
-  --glass-border: rgba(229, 56, 59, 0.16);
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(229, 56, 59, 0.18);
   --glass-glow: rgba(229, 56, 59, 0.08);
   --card-radius: 28px;
   --btn-radius: 999px;
@@ -52,19 +53,18 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: radial-gradient(circle at 50% 0%, #ffedf0 0%, #fff4f6 50%, #fff8f9 100%);
   user-select: none;
 }
 
 /* ==========================================================================
-   DYNAMIC AMBIENT BACKGROUND WITH KEN BURNS ANIMATION
+   FULL LAYOUT BACKGROUND PHOTO WITH KEN BURNS ANIMATION
    ========================================================================== */
 
 .ambient-bg-layer {
   position: fixed;
-  inset: -50px;
-  width: calc(100% + 100px);
-  height: calc(100% + 100px);
+  inset: -40px;
+  width: calc(100% + 80px);
+  height: calc(100% + 80px);
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
@@ -74,24 +74,26 @@ body {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center 35%;
-  filter: blur(50px) saturate(1.4) brightness(1.05);
-  opacity: 0.35;
-  transform: scale(1.15);
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-  animation: kenBurnsBg 24s infinite alternate ease-in-out;
+  background-position: center;
+  filter: saturate(1.1) brightness(0.96);
+  opacity: 0.55;
+  transform: scale(1.06);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: kenBurnsBg 26s infinite alternate ease-in-out;
 }
 
 @keyframes kenBurnsBg {
-  0% { transform: scale(1.15) translate(0, 0); }
-  50% { transform: scale(1.22) translate(-25px, 18px); }
-  100% { transform: scale(1.18) translate(20px, -22px); }
+  0% { transform: scale(1.06) translate(0, 0); }
+  50% { transform: scale(1.15) translate(-15px, 12px); }
+  100% { transform: scale(1.10) translate(12px, -15px); }
 }
 
 .ambient-bg-tint {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 25%, rgba(255, 246, 247, 0.55) 0%, rgba(255, 237, 240, 0.72) 65%, rgba(255, 248, 249, 0.88) 100%);
+  background: radial-gradient(circle at 50% 30%, rgba(255, 246, 248, 0.55) 0%, rgba(255, 238, 242, 0.72) 65%, rgba(255, 248, 250, 0.88) 100%),
+              linear-gradient(to bottom, rgba(255, 246, 248, 0.5) 0%, rgba(255, 238, 242, 0.45) 50%, rgba(255, 248, 250, 0.75) 100%);
 }
 
 #ambient-canvas,
@@ -116,7 +118,7 @@ body {
   filter: blur(80px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.55;
+  opacity: 0.45;
   animation: orbFloat 16s infinite alternate ease-in-out;
 }
 
@@ -213,7 +215,7 @@ body {
 .progress-bar-wrap {
   width: 100%;
   height: 6px;
-  background: rgba(229, 56, 59, 0.12);
+  background: rgba(229, 56, 59, 0.15);
   border-radius: 999px;
   overflow: hidden;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -247,16 +249,23 @@ body {
 .control-btn {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(229, 56, 59, 0.2);
   color: var(--text-soft);
-  padding: 0.5rem;
+  padding: 0.5rem 0.85rem;
   border-radius: var(--btn-radius);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
   cursor: pointer;
   transition: var(--transition-smooth);
   box-shadow: 0 2px 8px rgba(186, 24, 27, 0.06);
   backdrop-filter: blur(12px);
+}
+
+.control-btn.icon-only {
+  padding: 0.5rem;
 }
 
 .control-btn:hover {
@@ -268,12 +277,12 @@ body {
 }
 
 .control-btn svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
 }
 
 /* ==========================================================================
-   SLIDE VIEWPORT & CARDS
+   SLIDE VIEWPORT & CARDS (ELEGANT & SPACIOUS)
    ========================================================================== */
 
 .slide-viewport {
@@ -283,7 +292,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.25rem 1.75rem;
+  padding: 1rem 1.25rem 2rem;
   width: 100%;
 }
 
@@ -291,28 +300,34 @@ body {
   position: relative;
   width: 100%;
   max-width: 680px;
-  min-height: 540px;
+  min-height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s ease;
 }
 
-/* Slide Card Base with Luminous Porcelain Glass */
+/* Peek Mode: When clicking "Photo", cards become transparent to view photo */
+.slide-deck-container.photo-peek {
+  opacity: 0.15;
+}
+
+/* Slide Card Base with Luminous Porcelain Frosted Glass */
 .slide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 520px;
+  min-height: 440px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 45px rgba(186, 24, 27, 0.08),
-              0 4px 16px rgba(0, 0, 0, 0.03),
-              inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 45px rgba(186, 24, 27, 0.1),
+              0 4px 16px rgba(0, 0, 0, 0.04),
+              inset 0 1px 2px rgba(255, 255, 255, 0.95);
   border-radius: var(--card-radius);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  padding: 2.25rem 2.25rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  padding: 3rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -353,7 +368,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 1.15rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
@@ -391,81 +406,35 @@ body {
   font-weight: 600;
 }
 
-/* ==========================================================================
-   SLIDE PHOTO CARD PRESENTATION & ANIMATION
-   ========================================================================== */
-
-.slide-photo-card {
-  position: relative;
-  display: inline-block;
-  margin: 0.25rem auto;
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: floatPhoto 6s ease-in-out infinite alternate;
+/* Icon Burst */
+.slide-icon-burst {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 232, 235, 0.9), rgba(255, 245, 247, 0.5));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -0.25rem;
+  box-shadow: 0 4px 18px rgba(186, 24, 27, 0.1);
+  border: 1px solid rgba(229, 56, 59, 0.15);
 }
 
-@keyframes floatPhoto {
-  0% { transform: translateY(0) rotate(-0.5deg); }
-  50% { transform: translateY(-5px) rotate(0.8deg); }
-  100% { transform: translateY(2px) rotate(-0.4deg); }
+.animated-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 8px rgba(186, 24, 27, 0.2));
+  animation: floatIcon 3.5s infinite ease-in-out;
 }
 
-.photo-frame {
-  position: relative;
-  border-radius: 20px;
-  padding: 6px;
-  background: #ffffff;
-  border: 1px solid rgba(229, 56, 59, 0.18);
-  box-shadow: 0 14px 32px rgba(186, 24, 27, 0.12),
-              0 3px 10px rgba(0, 0, 0, 0.04);
-  overflow: hidden;
-  max-width: 320px;
-}
-
-.slide-photo-card:hover {
-  transform: translateY(-4px) scale(1.02);
-}
-
-.slide-img {
-  width: 100%;
-  max-width: 290px;
-  height: 200px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 14px;
-  display: block;
-  transition: transform 0.6s ease;
-}
-
-.slide-photo-card:hover .slide-img {
-  transform: scale(1.04);
-}
-
-.photo-glow-overlay {
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  pointer-events: none;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 40%, rgba(229, 56, 59, 0.05) 100%);
-}
-
-/* Proposal Photo on Slide 20 */
-.proposal-photo-card {
-  margin-bottom: 0.1rem;
-}
-
-.proposal-photo-frame {
-  max-width: 280px;
-  border-radius: 18px;
-}
-
-.proposal-photo-frame .slide-img {
-  height: 170px;
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(4deg); }
 }
 
 /* Typography (Light Theme) */
 .slide-title {
   font-family: var(--font-serif);
-  font-size: 1.95rem;
+  font-size: 2.1rem;
   font-weight: 700;
   line-height: 1.35;
   color: #2b0b10;
@@ -473,14 +442,14 @@ body {
 }
 
 .slide-title.subtle-title {
-  font-size: 1.65rem;
+  font-size: 1.75rem;
   font-weight: 600;
   color: #3b1016;
 }
 
 .slide-body {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.65;
   color: var(--text-soft);
   max-width: 520px;
   margin: 0 auto;
@@ -488,7 +457,7 @@ body {
 
 .slide-body.highlight-text {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-style: italic;
   color: #8c1d27;
   line-height: 1.5;
@@ -507,8 +476,8 @@ body {
   background: rgba(229, 56, 59, 0.08);
   border-left: 3px solid var(--secondary);
   border-radius: 12px;
-  padding: 0.85rem 1.3rem;
-  margin-top: 0.15rem;
+  padding: 0.9rem 1.4rem;
+  margin-top: 0.25rem;
 }
 
 .quote-text {
@@ -524,12 +493,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.85rem;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   width: 100%;
 }
 
 .slide-actions-bottom {
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 /* Primary Calm Red Button */
@@ -542,7 +511,7 @@ body {
   color: #ffffff;
   border: none;
   border-radius: var(--btn-radius);
-  padding: 0.9rem 2rem;
+  padding: 0.95rem 2rem;
   font-family: inherit;
   font-size: 1.05rem;
   font-weight: 600;
@@ -610,7 +579,7 @@ body {
   border: 1px solid rgba(229, 56, 59, 0.18);
   color: var(--text-soft);
   border-radius: var(--btn-radius);
-  padding: 0.9rem 1.4rem;
+  padding: 0.95rem 1.4rem;
   font-family: inherit;
   font-size: 0.95rem;
   font-weight: 600;
@@ -786,23 +755,23 @@ body {
    ========================================================================== */
 
 .slide-proposal {
-  min-height: 540px;
-  padding: 2.25rem 2.25rem 2.25rem;
+  min-height: 520px;
+  padding: 2.75rem 2.25rem 2.25rem;
 }
 
 .proposal-content {
-  gap: 1.15rem;
+  gap: 1.25rem;
 }
 
 .proposal-intro {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.5rem;
 }
 
 .proposal-headline {
   font-family: var(--font-serif);
-  font-size: 1.95rem;
+  font-size: 2rem;
   font-weight: 700;
   background: linear-gradient(135deg, #a4161a 0%, #c1121f 50%, #e5383b 100%);
   -webkit-background-clip: text;
@@ -821,16 +790,16 @@ body {
   background: rgba(229, 56, 59, 0.06);
   border: 1px solid rgba(229, 56, 59, 0.2);
   border-radius: 20px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.4rem 1.6rem;
   width: 100%;
   box-shadow: 0 8px 30px rgba(186, 24, 27, 0.08);
   position: relative;
-  margin: 0.15rem 0;
+  margin: 0.25rem 0;
 }
 
 .question-heart-ring {
-  font-size: 2rem;
-  margin-bottom: 0.15rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
   display: inline-block;
   animation: ringPop 2.2s infinite ease-in-out;
 }
@@ -842,11 +811,11 @@ body {
 
 .big-question-text {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: #2b0b10;
   line-height: 1.45;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .no-pressure-note {
@@ -860,7 +829,7 @@ body {
 .final-decisions-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.75rem;
+  gap: 0.85rem;
   width: 100%;
   max-width: 520px;
 }
@@ -869,7 +838,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.9rem 1.2rem;
+  padding: 1rem 1.25rem;
   border-radius: 16px;
   font-family: inherit;
   cursor: pointer;
@@ -1179,50 +1148,44 @@ kbd {
     max-width: 160px;
   }
 
+  .control-btn .control-label {
+    display: none;
+  }
+
   .slide-viewport {
     padding: 0.5rem 1rem 1.5rem;
   }
 
   .slide-deck-container {
-    min-height: 520px;
+    min-height: 480px;
   }
 
   .slide {
-    padding: 2rem 1.25rem;
-    min-height: 500px;
+    padding: 2.25rem 1.5rem;
+    min-height: 460px;
     border-radius: 22px;
   }
 
-  .slide-img {
-    max-width: 240px;
-    height: 170px;
-  }
-
-  .proposal-photo-frame .slide-img {
-    height: 150px;
-    max-width: 220px;
-  }
-
   .slide-title {
-    font-size: 1.55rem;
+    font-size: 1.65rem;
   }
 
   .slide-title.subtle-title {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 
   .slide-body {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.05rem;
+    line-height: 1.55;
   }
 
   .slide-body.highlight-text {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .primary-btn {
-    padding: 0.85rem 1.5rem;
-    font-size: 0.95rem;
+    padding: 0.85rem 1.6rem;
+    font-size: 0.98rem;
     width: 100%;
   }
 
@@ -1252,11 +1215,11 @@ kbd {
   }
 
   .proposal-headline {
-    font-size: 1.55rem;
+    font-size: 1.65rem;
   }
 
   .big-question-text {
-    font-size: 1.15rem;
+    font-size: 1.18rem;
   }
 
   .decision-title {

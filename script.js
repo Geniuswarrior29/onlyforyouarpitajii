@@ -22,8 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const progressText = document.getElementById('progress-text');
   const dotsContainer = document.getElementById('dots-container');
   const fullscreenToggle = document.getElementById('fullscreen-toggle');
+  const peekPhotoBtn = document.getElementById('peek-photo-btn');
+  const slideDeck = document.getElementById('slide-deck');
   const liveTimeEl = document.getElementById('live-time');
   const ambientBgImg = document.getElementById('ambient-bg-img');
+
+  // Preload all 20 images for instant background transitions
+  for (let i = 1; i <= totalSlides; i++) {
+    const img = new Image();
+    img.src = `images/slide_${i}.jpg`;
+  }
 
   // Modal Elements
   const modal = document.getElementById('response-modal');
@@ -94,11 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Crossfade Dynamic Ambient Background Image
     if (ambientBgImg) {
-      ambientBgImg.style.opacity = '0.12';
+      ambientBgImg.style.opacity = '0.28';
       setTimeout(() => {
         ambientBgImg.style.backgroundImage = `url('images/slide_${currentSlide}.jpg')`;
-        ambientBgImg.style.opacity = '0.35';
-      }, 250);
+        ambientBgImg.style.opacity = slideDeck && slideDeck.classList.contains('photo-peek') ? '0.9' : '0.55';
+      }, 180);
     }
   }
 
@@ -180,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(updateLiveClock, 30000);
 
   // ==========================================
-  // FULLSCREEN TOGGLE
+  // FULLSCREEN & PHOTO PEEK TOGGLES
   // ==========================================
   if (fullscreenToggle) {
     fullscreenToggle.addEventListener('click', () => {
@@ -191,6 +199,17 @@ document.addEventListener('DOMContentLoaded', () => {
           document.exitFullscreen();
         }
       }
+    });
+  }
+
+  if (peekPhotoBtn && slideDeck) {
+    peekPhotoBtn.addEventListener('click', () => {
+      const isPeeking = slideDeck.classList.toggle('photo-peek');
+      if (ambientBgImg) {
+        ambientBgImg.style.opacity = isPeeking ? '0.92' : '0.55';
+      }
+      const label = peekPhotoBtn.querySelector('.control-label');
+      if (label) label.textContent = isPeeking ? 'Show' : 'Photo';
     });
   }
 
